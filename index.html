@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TUM Women in Garching</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 id="site-title">TUM Women in Garching</h1>
+      <nav>
+        <ul>
+          <li><a href="#mission" data-i18n="nav-mission">Mission</a></li>
+          <li><a href="#initiatives" data-i18n="nav-initiatives">Initiatives</a></li>
+          <li><a href="#resources" data-i18n="nav-resources">Resources</a></li>
+          <li><a href="#events" data-i18n="nav-events">Events</a></li>
+          <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+        </ul>
+        <button id="lang-toggle" aria-label="language toggle">DE</button>
+        <button id="theme-toggle" aria-label="theme toggle">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="mission">
+      <div class="container">
+        <h2 data-i18n="mission-title">Our Mission</h2>
+        <p data-i18n="mission-text">
+          We advocate for gender equality and empower women students at TUM's Garching campus through support, awareness and community.
+        </p>
+      </div>
+    </section>
+
+    <section id="initiatives" class="alt">
+      <div class="container">
+        <h2 data-i18n="initiatives-title">Initiatives</h2>
+        <ul>
+          <li data-i18n="initiative-1">Mentorship programs connecting new students with experienced mentors.</li>
+          <li data-i18n="initiative-2">Workshops on leadership, negotiation and personal development.</li>
+          <li data-i18n="initiative-3">Advocacy for inclusive policies within departments and faculties.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="resources">
+      <div class="container">
+        <h2 data-i18n="resources-title">Resources</h2>
+        <p data-i18n="resources-text">
+          Find campus services, support networks and informational materials to help you thrive at TUM.
+        </p>
+        <ul>
+          <li><a href="https://www.tum.de" target="_blank" data-i18n="resource-equal-opportunity">TUM Equal Opportunity & Diversity Office</a></li>
+          <li><a href="https://www.ph.tum.de" target="_blank" data-i18n="resource-frauenbeauftragte">Department Frauenbeauftragte contacts</a></li>
+          <li><a href="https://www.studentenwerk-muenchen.de" target="_blank" data-i18n="resource-counselling">Counselling & psychological services</a></li>
+          <li><a href="https://www.tum.de/security" target="_blank" data-i18n="resource-security">Campus security (Garching)</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="events" class="alt">
+      <div class="container">
+        <h2 data-i18n="events-title">Upcoming Events</h2>
+        <ul>
+          <li data-i18n="event-1"><strong>October 10:</strong> Networking lunch at MI building, 12 PM.</li>
+          <li data-i18n="event-2"><strong>November 5:</strong> Panel discussion on women in STEM at MW Auditorium, 4 PM.</li>
+          <li data-i18n="event-3"><strong>December 8:</strong> Self-defence workshop in PH gym, 6 PM.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 data-i18n="contact-title">Get Involved</h2>
+        <p data-i18n="contact-text">Join our community or send us a message.</p>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name" data-i18n="form-name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="form-email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message" data-i18n="form-message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" data-i18n="form-submit">Send</button>
+        </form>
+        <p id="form-result" role="alert"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p data-i18n="footer">&copy; <span id="current-year"></span> Student initiative - not an official TUM website.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -108,6 +108,37 @@ button[type="submit"]:hover {
   opacity: 0.9;
 }
 
+/* Link-styled button for call to action */
+.btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive navigation on small screens */
+@media (max-width: 600px) {
+  header nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  header nav ul li {
+    margin: 0.5rem 0;
+  }
+}
+
 footer {
   background-color: var(--primary);
   color: #ffffff;

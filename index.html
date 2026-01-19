@@ -129,7 +129,12 @@
       <div class="container">
         <h2 data-i18n="contact-title">Get Involved</h2>
         <p data-i18n="contact-text">Join our community or send us a message.</p>
-        <form id="contact-form">
+        <form id="contact-form" action="https://formsubmit.co/sara.gutkin@tum.de" method="POST">
+          <!-- Hidden inputs for Formsubmit configuration -->
+          <input type="hidden" name="_subject" value="New message from Women in Chemistry Network website">
+          <!-- Disable Formsubmit's captcha to avoid user friction -->
+          <input type="hidden" name="_captcha" value="false">
+
           <div class="form-group">
             <label for="name" data-i18n="form-name">Name</label>
             <input type="text" id="name" name="name" required />

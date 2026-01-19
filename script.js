@@ -133,17 +133,43 @@ function toggleTheme() {
 }
 
 function handleFormSubmit(event) {
+  // Prevent default form submission so we can submit via fetch
   event.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-  if (name && email && message) {
-    // For demonstration, just show a success message
-    const resultEl = document.getElementById('form-result');
-    resultEl.style.color = 'green';
-    resultEl.textContent = currentLang === 'en' ? 'Thank you for your message!' : 'Danke für deine Nachricht!';
-    document.getElementById('contact-form').reset();
-  }
+  const form = event.target;
+  const resultEl = document.getElementById('form-result');
+  // Build FormData from the form fields
+  const formData = new FormData(form);
+  // Send the form data to Formsubmit to trigger an email
+  fetch('https://formsubmit.co/sara.gutkin@tum.de', {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+    .then(response => {
+      if (response.ok) {
+        // Display a localized success message
+        resultEl.style.color = 'green';
+        resultEl.textContent = currentLang === 'en' ?
+          'Thank you for your message!' :
+          'Danke für deine Nachricht!';
+        form.reset();
+      } else {
+        // Display a localized error message if submission fails
+        resultEl.style.color = 'red';
+        resultEl.textContent = currentLang === 'en'
+          ? 'There was an error sending your message. Please try again later.'
+          : 'Beim Senden deiner Nachricht ist ein Fehler aufgetreten. Bitte versuche es erneut.';
+      }
+    })
+    .catch(error => {
+      // Display a localized error message for network errors
+      resultEl.style.color = 'red';
+      resultEl.textContent = currentLang === 'en'
+        ? 'There was an error sending your message. Please try again later.'
+        : 'Beim Senden deiner Nachricht ist ein Fehler aufgetreten. Bitte versuche es erneut.';
+    });
 }
 
 // Initialize translations on DOMContentLoaded

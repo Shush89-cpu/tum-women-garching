@@ -137,23 +137,28 @@ function handleFormSubmit(event) {
   event.preventDefault();
   const form = event.target;
   const resultEl = document.getElementById('form-result');
-  // Build FormData from the form fields
+  // Build an object from the form fields
   const formData = new FormData(form);
-  // Send the form data to Formsubmit to trigger an email
-  fetch('https://formsubmit.co/sara.gutkin@tum.de', {
+  const jsonData = {};
+  formData.forEach((value, key) => {
+    jsonData[key] = value;
+  });
+  // Send the form data to Formsubmit via the AJAX endpoint using JSON
+  fetch('https://formsubmit.co/ajax/sara.gutkin@tum.de', {
     method: 'POST',
-    body: formData,
     headers: {
-      'Accept': 'application/json'
-    }
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(jsonData)
   })
     .then(response => {
       if (response.ok) {
         // Display a localized success message
         resultEl.style.color = 'green';
-        resultEl.textContent = currentLang === 'en' ?
-          'Thank you for your message!' :
-          'Danke für deine Nachricht!';
+        resultEl.textContent = currentLang === 'en'
+          ? 'Thank you for your message!'
+          : 'Danke für deine Nachricht!';
         form.reset();
       } else {
         // Display a localized error message if submission fails

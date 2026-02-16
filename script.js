@@ -39,7 +39,7 @@ const translations = {
     "events-coming-soon": "Coming soon — stay in touch.",
     // Updated details for second meetup on 29 January 2026
     "event-meetup-title": "Women in Chemistry Network: Second Meetup",
-    "event-meetup-date": "Event Date: 29th of January (29/01/26) at 17:00",
+    "event-meetup-date": "Event Date: 25th of February (25/02/26) at 17:00",
     "event-meetup-location": "Event Location: Center for Functional Protein Assemblies (CPA), Seminar room 006.",
     "event-meetup-register": "Register here",
     "contact-title": "Get Involved",
@@ -72,7 +72,7 @@ const translations = {
     "events-coming-soon": "Bald verfügbar – bleib dran.",
         // Updated details for second meetup on 29 January 2026 (German)
         "event-meetup-title": "Women in Chemistry Network: Zweites Treffen",
-    "event-meetup-date": "Veranstaltungsdatum: 29. Januar (29/01/26) um 17:00",
+    "event-meetup-date": "Veranstaltungsdatum: 25. Februar (25/02/26) um 17:00",
     "event-meetup-location": "Veranstaltungsort: Center for Functional Protein Assemblies (CPA), Seminarraum 006.",
     "event-meetup-register": "Hier registrieren",
     "contact-title": "Mitmachen",

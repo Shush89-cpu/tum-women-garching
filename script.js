@@ -37,6 +37,8 @@ const translations = {
     "resource-security": "Campus security (Garching)",
     "events-title": "Upcoming Events",
     "events-coming-soon": "Coming soon — stay in touch.",
+    // Title for past events section
+    "past-events-title": "Past events",
     // Updated details for second meetup on 29 January 2026
     "event-meetup-title": "Women in Chemistry Network: Third Meetup",
     "event-meetup-date": "Event Date: 25th of February (25/02/26) at 17:00",
@@ -70,6 +72,8 @@ const translations = {
     "resource-security": "Campus-Sicherheit (Garching)",
     "events-title": "Bevorstehende Veranstaltungen",
     "events-coming-soon": "Bald verfügbar – bleib dran.",
+        // Title for past events section (German)
+        "past-events-title": "Vergangene Veranstaltungen",
         // Updated details for second meetup on 29 January 2026 (German)
         "event-meetup-title": "Women in Chemistry Network: Drittes Treffen",
     "event-meetup-date": "Veranstaltungsdatum: 25. Februar (25/02/26) um 17:00",

@@ -41,7 +41,7 @@ const translations = {
     "past-events-title": "Past events",
     // Updated details for second meetup on 29 January 2026
     "event-meetup-title": "Women in Chemistry Network: Third Meetup",
-    "event-meetup-date": "Event Date: 25th of February (25/02/26) at 17:00",
+    "event-meetup-date": "EvEvent Date: 16th of April (16/04/26) at 17:00
     "event-meetup-location": "Event Location: Center for Functional Protein Assemblies (CPA), Seminar room 006.",
     "event-meetup-register": "Register here",
     "contact-title": "Get Involved",
